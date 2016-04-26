@@ -237,7 +237,7 @@ var addGifToPage = function(gifName) {
   privateRadio.setAttribute('id', 'private_radio');
   privateRadio.setAttribute('class', 'radio.inline');
   privateRadio.setAttribute('type', 'radio');
-  privateRadio.setAttribute('name', 'private');
+  privateRadio.setAttribute('name', 'public');
   privateRadio.setAttribute('value', '2');
 
   var privateLabel = document.createElement('label');
