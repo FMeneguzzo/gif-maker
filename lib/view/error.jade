@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  #error-content
+    h1.
+      Error #{error.status} - #{message}
+    if(error.status == 404)
+      img(
+        src='https://m.popkey.co/cedcc1/eLw7m.gif'
+        alt='404 image'
+      )

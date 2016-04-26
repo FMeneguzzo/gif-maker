@@ -1,0 +1,54 @@
+{
+  "name": "gif-maker",
+  "version": "1.0.0",
+  "description": "An express middleware that allows the creation of gifs with a basic authentication system",
+  "scripts": {
+    "postinstall": "sh dependencies.sh"
+  },
+  "contributors": [
+    {
+      "name": "Meneguzzo Francesco",
+      "email": "meneguzzof@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "express": "^4.13.x",
+    "body-parser": "latest",
+    "fluent-ffmpeg": "^2.0.x",
+    "request": "latest",
+    "youtube-dl": "latest",
+    "async": "latest",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.3.3",
+    "express-session": "latest",
+    "mongoose": "^4.4.1",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^1.0.0",
+    "serve-favicon": "^2.2.0",
+    "jade": "^1.9.1"
+  },
+  "devDependencies": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FMeneguzzo/gif-maker"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "express",
+    "passport",
+    "gif"
+  ],
+  "author": "Francesco Meneguzzo <meneguzzof@gmail.com> (https://github.com/FMeneguzzo)",
+  "license": "GNU General Public License v3.0",
+  "bugs": {
+    "url": "https://github.com/FMeneguzzo/gif-maker/issues"
+  },
+  "homepage": "https://github.com/FMeneguzzo",
+  "engines": {
+    "node": "5.9.x"
+  }
+}

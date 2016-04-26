@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  script(src='#{mountUrl}/javascripts/galleries.js')
+  #gallery.container
+    #self-gallery-message
+      if(user) 
+        h1 Start 
+          a(
+            href='#{mountUrl}/create'
+          ).
+            creating a gif
+          |&nbspor check out your 
+          a(
+            href='#{mountUrl}/sgallery'
+          ).
+            own gallery
+          |!
+        h1 You can also view the latest public creations!
+      if(!user)
+        h1 View the latest public creations!
+    #gallery-videos.jumbotron.row
+      if(user)
+        script.
+          showGallery(null, '#{user.username}', null)
+      if(!user)
+        script.
+          showGallery(null, null, null)
+  

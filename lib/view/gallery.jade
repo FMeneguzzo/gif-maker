@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  script(src='#{mountUrl}/javascripts/galleries.js')
+  #gallery.container
+    #self-gallery-message
+      h1 You're now visiting #{creator}'s gallery!
+    #gallery-videos.jumbotron.row
+      if(user)
+        script.
+          showGallery(null, '#{user.username}', '#{creator}')
+      if(!user)
+        script.
+          showGallery(null, null, '#{creator}')

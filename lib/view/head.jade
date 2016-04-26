@@ -1,0 +1,12 @@
+#title
+  #header-container.container.row
+    a(href="#{mountUrl}/")
+      h1.col-md-6.col-ms-6.col-xs-6 Gif-maker
+    #login-block.col-md-6.col-ms-6.col-xs-6
+      if (!user)
+        a(href="#{mountUrl}/login") Login
+        br
+        a(href="#{mountUrl}/register") Register
+      if (user)
+        p Hello, #{user.username}!
+        a(href="#{mountUrl}/logout") Logout

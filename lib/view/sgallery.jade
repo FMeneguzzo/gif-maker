@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  script(src='#{mountUrl}/javascripts/galleries.js')
+  #gallery.container
+    if(user)
+      #self-gallery-message
+        h1 Check out the gifs you created!
+      #gallery-videos.jumbotron.row
+        script.
+          showGallery('true', '#{user.username}', null)
+    if(!user)
+      h1 Login in order to view your personal gallery!

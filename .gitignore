@@ -1,0 +1,14 @@
+# Dependency directory
+
+node_modules
+node_modules/
+dependencies
+dependencies/
+tmp
+tmp/
+.project
+.directory
+.gitkeep
+
+config.js
+
