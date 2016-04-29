@@ -182,16 +182,17 @@ function submit() {
       data: JSON.stringify(req),
       contentType: "application/json; charset=utf-8",
       success: function(result){
-        var videoName = /\.webm$/;
-        if(result.match(videoName)) {
-          addGifToPage(result);
-        }
-       else {
-          alert(result);
-        }
+        addGifToPage(result);
+      },
+      error: function(err) {
+        document.getElementById('result-preview').innerHTML = "<h1> There was an error while creating your gif :( Try again with different videos! </h1>";
+      },
+      complete: function() {
         // Enables back the submit button
         submitButton.setAttribute('class', 'bottom-btn btn btn-success col-md-4 col-md-offset-4');
-      } 
+        window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+      }
+
     });
   }
   else
